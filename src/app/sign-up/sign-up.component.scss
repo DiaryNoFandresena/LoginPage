@@ -1,0 +1,66 @@
+.example-container mat-form-field {
+  margin: auto;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  padding: 2% 0;
+}
+
+.example-right-align {
+  text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.loginBlock {
+  margin: auto;
+  width: 30%;
+  color: #00000065;
+  margin-top: 10px;
+}
+
+mat-card {
+  padding: 0;
+}
+
+form {
+  padding: 20px;
+}
+
+.toolbarSingIn {
+  justify-content: center;
+}
+
+.loginButton {
+  justify-content: center;
+  border-radius: 10px;
+}
+
+mat-card {
+  border-radius: 20px;
+}
+
+mat-toolbar {
+  border-radius: 20px 20px 0 0;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+.aLink {
+  justify-content: space-between;
+  margin: 15px 0;
+  a {
+  text-decoration: none;
+  color: aliceblue;
+  }
+}
