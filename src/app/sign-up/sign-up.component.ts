@@ -10,17 +10,19 @@ import { Router } from '@angular/router';
 export class SignUpComponent implements OnInit {
 
   email = new FormControl('', [Validators.required, Validators.email]);
-  text = new FormControl('' , [Validators.required])
+  text = new FormControl('' , [Validators.required]);
+  password = new FormControl('',[Validators.required]);
   hide = true;
   newAccount !: FormGroup;
+  newAccountCreatedStatus !: boolean;
 
   constructor( private routeur : Router ,
                private formBuilder : FormBuilder ){}
 
   ngOnInit(): void {
+    this.newAccountCreatedStatus=false;
     this.newAccount=this.formBuilder.group({
-      name :[null],
-      lastName : [null],
+      username :[null],
       email :[null],
       password :[null],
       confirmPassword :[null],
@@ -36,7 +38,14 @@ export class SignUpComponent implements OnInit {
     }
 
     return this.email.hasError('email') ? 'Not a valid email' : '';
+    // this.newAccountCreatedStatus=false;
+  }
 
+  getErrorMessagePassword(){
+    if (this.password.hasError('required')){
+      return 'You must enter a password';
+    }
+    return this.password.hasError('password') ? 'Not a same password' : '';
   }
 
   onSubmitForm(){

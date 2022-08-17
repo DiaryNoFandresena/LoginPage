@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { LoginComponent } from './login/login.component';
-import { PrincipalPageComponent } from './principal-page/principal-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -16,14 +15,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MatTableModule } from '@angular/material/table';
+import {MatListModule} from '@angular/material/list';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+import { PrincipalPagesComponent } from './principal Page/principal-pages/principal-pages.component';
+import { SideBarComponent} from './principal Page/side-bar/side-bar.component';
+import { UserListComponent } from './principal Page/user-list/user-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PrincipalPageComponent,
     SignUpComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    PrincipalPagesComponent,
+    SideBarComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +45,9 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatToolbarModule,
     MatTableModule,
+    MatListModule,
+    MatSidenavModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

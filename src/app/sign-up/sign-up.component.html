@@ -8,13 +8,7 @@
       <form [formGroup]="newAccount" class="example-container">
 
         <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input type="text" matInput placeholder="moi@example.com" [formControl]="text" required >
-          <mat-error *ngIf="text.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill">
-          <mat-label>LastName</mat-label>
+          <mat-label>username</mat-label>
           <input type="text" matInput placeholder="moi@example.com" [formControl]="text" required >
           <mat-error *ngIf="text.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
@@ -31,6 +25,7 @@
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
+          <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
@@ -39,6 +34,7 @@
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
+          <mat-error *ngIf="password.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
 
         <div type="submit" (click)="onSubmitForm()" class="loginButton">

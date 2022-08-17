@@ -1,0 +1,40 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="sidenav.toggle()" (click)="onclicked()">
+        <mat-icon *ngIf="sidenavStatus==true">menu</mat-icon>
+        <mat-icon *ngIf="sidenavStatus==false">close</mat-icon>
+    </button>
+    side navigation
+    
+</mat-toolbar>
+    
+<mat-sidenav-container>
+    
+    <mat-sidenav mode="over" class="mat-elevation-z8">
+
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span>create new user</span>
+        </button>
+
+        <button mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Log Out</span>
+        </button>
+
+        <mat-divider></mat-divider>
+        
+    </mat-sidenav>
+
+</mat-sidenav-container>

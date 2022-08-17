@@ -1,0 +1,21 @@
+/* Structure */
+table {
+    width: 100%;
+    // height: 95vh;
+    background: #757171af;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    color: aliceblue;
+  }
+mat-card {
+    overflow-y: scroll;
+    /* height: calc(100vh - 50px); */
+    height: 90vh;   
+}
+mat-toolbar{
+  display: flex;
+  justify-content: center;
+}
